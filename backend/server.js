@@ -33,20 +33,12 @@ const allowedOrigins = [
   'https://linkedinmini.vercel.app',
   'https://linkedinmini-git-main-shresthapandits-projects.vercel.app',
   'https://linkedinmini-bw8o4t7yr-shresthapandits-projects.vercel.app',
+  'https://linkedinmini-787ml7f56-shresthapandits-projects.vercel.app',
   'http://localhost:3000'
 ];
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
@@ -72,6 +64,11 @@ app.get('/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
+
+// Debug route to test if routes are working
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API routes are working!' });
+});
 
 // Basic route
 app.get('/', (req, res) => {
