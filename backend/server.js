@@ -13,18 +13,41 @@ const app = express();
 // Connect to database
 connectDB();
 
+// Debug CORS origins
+console.log('Allowed CORS origins:', [
+  process.env.FRONTEND_URL || 'https://linkedinmini.vercel.app',
+  'https://linkedinmini-pxciciuns-shresthapandits-projects.vercel.app',
+  'http://localhost:3000'
+]);
+
 // Middleware
 app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL || 'https://linkedinmini.vercel.app',
-    'https://linkedinmini-pxciciuns-shresthapandits-projects.vercel.app',
-    'http://localhost:3000'
-  ],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = [
+      process.env.FRONTEND_URL || 'https://linkedinmini.vercel.app',
+      'https://linkedinmini-pxciciuns-shresthapandits-projects.vercel.app',
+      'http://localhost:3000'
+    ];
+    
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      console.log('CORS blocked origin:', origin);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  optionsSuccessStatus: 200
 }));
 app.use(express.json());
+
+// Handle preflight requests
+app.options('*', cors());
 
 // Routes
 app.use('/api/auth', authRoutes);
