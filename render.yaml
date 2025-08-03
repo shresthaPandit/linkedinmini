@@ -15,4 +15,4 @@ services:
       - key: PORT
         value: 10000
       - key: FRONTEND_URL
-        value: https://linkedinmini.vercel.app 
+        value: https://linkedinmini-787ml7f56-shresthapandits-projects.vercel.app 

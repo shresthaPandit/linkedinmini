@@ -31,24 +31,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://linkedinmini.vercel.app',
+    url: 'https://linkedinmini-787ml7f56-shresthapandits-projects.vercel.app',
     title: 'LinkedIn Mini - Connect & Share',
     description: 'A professional networking platform where you can connect, share, and grow your professional network.',
     siteName: 'LinkedIn Mini',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'LinkedIn Mini',
-      },
-    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'LinkedIn Mini - Connect & Share',
     description: 'A professional networking platform where you can connect, share, and grow your professional network.',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
