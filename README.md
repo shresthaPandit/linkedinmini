@@ -50,7 +50,7 @@ A modern, full-stack LinkedIn clone built with Next.js, Node.js, and MongoDB. Co
    # Backend
    cd backend
    npm install
-
+   
    # Frontend
    cd ../frontend
    npm install
@@ -62,7 +62,7 @@ A modern, full-stack LinkedIn clone built with Next.js, Node.js, and MongoDB. Co
    MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
    PORT=5000
-
+   
    # Frontend (.env.local)
    NEXT_PUBLIC_API_URL=http://localhost:5000
    ```
@@ -72,7 +72,7 @@ A modern, full-stack LinkedIn clone built with Next.js, Node.js, and MongoDB. Co
    # Backend (Terminal 1)
    cd backend
    npm run dev
-
+   
    # Frontend (Terminal 2)
    cd frontend
    npm run dev
@@ -121,12 +121,16 @@ This project is deployed using:
 - **Backend**: Render (Node.js hosting)
 - **Database**: MongoDB Atlas (Cloud database)
 
+<<<<<<< HEAD
 ## 📱 Screenshots
 
 ![Home Page](https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=LinkedIn+Mini+Home)
 ![Profile Page](https://via.placeholder.com/800x400/10B981/FFFFFF?text=User+Profile)
 ![Post Creation](https://via.placeholder.com/800x400/F59E0B/FFFFFF?text=Create+Post)
 
+=======
+
+>>>>>>> 2d78a74c160fe786d45c61592c54c730bcbbfdab
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -147,4 +151,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+<<<<<<< HEAD
 **Ready to build your professional network?** [Try the live demo!](https://linkedinmini.vercel.app) 
+=======
+**Ready to build your professional network?** [Try the live demo!](https://linkedinmini.vercel.app)
+>>>>>>> 2d78a74c160fe786d45c61592c54c730bcbbfdab
