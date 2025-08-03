@@ -16,7 +16,7 @@ connectDB();
 // Middleware
 app.use(cors({
   origin: [
-    'https://linkedinmini.vercel.app',
+    process.env.FRONTEND_URL || 'https://linkedinmini.vercel.app',
     'https://linkedinmini-pxciciuns-shresthapandits-projects.vercel.app',
     'http://localhost:3000'
   ],
