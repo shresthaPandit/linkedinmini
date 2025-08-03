@@ -1,0 +1,27 @@
+{
+  "name": "LinkedIn Mini",
+  "short_name": "LinkedIn Mini",
+  "description": "A professional networking platform where you can connect, share, and grow your professional network.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0077b5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["social", "business", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+} 
