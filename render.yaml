@@ -1,16 +1,18 @@
 services:
   - type: web
-    name: linkedinclone-backend
+    name: linkedinmini-backend
     env: node
     plan: free
     buildCommand: cd backend && npm install
     startCommand: cd backend && npm start
     envVars:
       - key: MONGODB_URI
-        value: mongodb+srv://username:password@cluster.mongodb.net/linkedinclone
+        value: mongodb+srv://happygreat123411:Noobhappy1234@cluster0.bymdkbj.mongodb.net/mynewappdb?retryWrites=true&w=majority&appName=Cluster0
       - key: JWT_SECRET
-        value: your-super-secret-jwt-key-here
+        value: shrestha@123$
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 10000 
+        value: 10000
+      - key: FRONTEND_URL
+        value: https://linkedinmini.vercel.app 
