@@ -23,7 +23,6 @@ export default function ProfilePage() {
 
   useEffect(() => {
     const checkAuth = () => {
-      const isAuth = authUtils.isAuthenticated();
       const userData = authUtils.getUser();
       setCurrentUser(userData);
     };

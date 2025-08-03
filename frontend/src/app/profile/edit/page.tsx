@@ -6,7 +6,6 @@ import { usersAPI } from '@/lib/api';
 import { authUtils } from '@/lib/auth';
 import { User } from '@/types';
 import Loading from '@/components/ui/Loading';
-import ErrorMessage from '@/components/ui/ErrorMessage';
 
 export default function EditProfilePage() {
   const [formData, setFormData] = useState({

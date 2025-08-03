@@ -23,8 +23,9 @@ export default function PostForm({ onPostCreated }: PostFormProps) {
       await postsAPI.createPost(content.trim());
       setContent('');
       onPostCreated();
-    } catch (err: any) {
-      setError(err.response?.data?.error || 'Failed to create post');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : 'Failed to create post';
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }

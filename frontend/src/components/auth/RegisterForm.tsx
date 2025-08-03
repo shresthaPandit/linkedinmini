@@ -45,8 +45,9 @@ export default function RegisterForm() {
       
       authUtils.setAuth(response.data.token, userData);
       router.push('/');
-    } catch (err: any) {
-      setError(err.response?.data?.error || 'Registration failed');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : 'Registration failed';
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }

@@ -43,8 +43,9 @@ export default function LoginForm() {
       
       authUtils.setAuth(response.data.token, userData);
       router.push('/');
-    } catch (err: any) {
-      setError(err.response?.data?.error || 'Login failed');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : 'Login failed';
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -103,7 +104,7 @@ export default function LoginForm() {
       </form>
       
       <p className="mt-4 text-center text-sm text-gray-600">
-        Don't have an account?{' '}
+        Don&apos;t have an account?{' '}
         <a href="/auth/register" className="text-blue-600 hover:text-blue-500">
           Sign up
         </a>
