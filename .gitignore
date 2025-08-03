@@ -11,6 +11,9 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Demo users script (contains sensitive data)
+backend/create-demo-users.js
+
 # Next.js
 .next/
 out/
