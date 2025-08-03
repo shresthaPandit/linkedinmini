@@ -22,12 +22,8 @@ console.log('Allowed CORS origins:', [
 
 // Middleware
 app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL || 'https://linkedinmini.vercel.app',
-    'https://linkedinmini-pxciciuns-shresthapandits-projects.vercel.app',
-    'http://localhost:3000'
-  ],
-  credentials: true,
+  origin: '*',
+  credentials: false,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
