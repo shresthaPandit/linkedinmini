@@ -4,7 +4,7 @@ A full-stack LinkedIn clone built with modern technologies, featuring user authe
 
 ## 🚀 Live Demo
 
-- **Frontend**: [https://linkedinmini-787ml7f56-shresthapandits-projects.vercel.app](https://linkedinmini-787ml7f56-shresthapandits-projects.vercel.app)
+- **Frontend**: [https://linkedinmini-787ml7f56-shresthapandits-projects.vercel.app](https://linkedinmini.vercel.app/auth/login) 
 - **Backend API**: [https://linkedinmini-backend.onrender.com](https://linkedinmini-backend.onrender.com)
 
 ## 🛠️ Tech Stack
